@@ -28,7 +28,7 @@ export default function Home({ books }) {
 
 				<p>*page turn*</p>
 				<p>
-					I like to read. This is some of what I've read. Total: {filteredbooks.length}
+					I like to read. This is some of what I&apos;ve read. Total: {filteredbooks.length}
 				</p>
 			</section>
 
