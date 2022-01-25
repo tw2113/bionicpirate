@@ -20,7 +20,7 @@ export default function Layout({children, home}) {
 			<header className={styles.header}>
 				{home ? (
 					<>
-						<h1 className="text-3xl">{name}'s Books</h1>
+						<h1 className="text-3xl">{name}\'s Books</h1>
 					</>
 				) : (
 					<></>
