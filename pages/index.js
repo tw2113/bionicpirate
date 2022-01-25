@@ -36,7 +36,7 @@ export default function Home({ books }) {
 					{
 						filteredbooks.map(
 							(book) =>
-							<div className="flex-auto w-3/12">
+							<div key={book.id} className="flex-auto w-3/12">
 								<Image
 									src={book._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}
 									alt=""
