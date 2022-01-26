@@ -16,7 +16,6 @@ export async function getStaticProps() {
 	}
 }
 
-
 export default function Home({ books }) {
 	let filteredbooks = books.filter(book => book._embedded['wp:featuredmedia'] !== undefined)
 	return (
@@ -33,11 +32,11 @@ export default function Home({ books }) {
 				<p>I mostly read on weekends.</p>
 			</section>
 
-			<article className="flex flex-wrap w-full my-5">
+			<article className="flex flex-wrap w-full">
 					{
 						filteredbooks.map(
 							(book) =>
-							<div key={book.id} className="flex-auto w-3/12">
+							<div key={book.id} className="flex-auto w-2/12">
 								<Image
 									src={book._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}
 									alt=""
