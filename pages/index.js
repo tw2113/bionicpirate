@@ -24,15 +24,16 @@ export default function Home({ books }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section className="">
+			<section className="text-center font-normal font-base">
 
 				<p>*page turn*</p>
 				<p>
 					I like to read. This is some of what I&apos;ve read. Total: {filteredbooks.length}
 				</p>
+				<p>I mostly read on weekends.</p>
 			</section>
 
-			<article className="flex flex-wrap w-full">
+			<article className="flex flex-wrap w-full my-5">
 					{
 						filteredbooks.map(
 							(book) =>
