@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Michael'
-export const siteTitle = 'Michael\'s Bookshelf'
+export const siteTitle = 'Michael\'s Book shelf'
 
 export default function Layout({children, home}) {
 	return (
@@ -20,7 +20,7 @@ export default function Layout({children, home}) {
 			<header className={styles.header}>
 				{home ? (
 					<>
-						<h1 className="text-3xl">{name}&apos;s Books</h1>
+						<h1 className="text-3xl">{name}&apos;s Book shelf</h1>
 					</>
 				) : (
 					<></>
