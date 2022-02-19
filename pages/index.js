@@ -26,7 +26,6 @@ export default function Home({ books }) {
 				<title>{siteTitle}</title>
 			</Head>
 			<section>
-
 				<div className="text-center">
 				<p>*record scratch* *page turn*</p>
 				<p>Oh hi there, I didn&apos;t see you come in.</p>
