@@ -1,13 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout, {siteTitle} from '../components/layout'
+import Link from 'next/link'
 import utilStyles from '../styles/utils.module.css'
 
 import {fetchBookData} from "../lib/posts";
 
 export async function getStaticProps() {
 
-	const books = await fetchBookData();
+	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100';
+	const books = await fetchBookData( url );
 
 	return {
 		props: {
