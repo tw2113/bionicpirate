@@ -29,7 +29,7 @@ export default function Home({ books }) {
 
 				<div className="text-center">
 				<p>*record scratch* *page turn*</p>
-				<p>Oh hi there, I didn't see you come in.</p>
+				<p>Oh hi there, I didn&apos;t see you come in.</p>
 				<p>I like to read. This is some of what I&apos;ve read. About {filteredbooks.length} at the moment.</p>
 				<p>Click on a book to open it in <Link href="https://www.indiebound.org"><a>IndieBound.org</a></Link> and hopefully find where to buy locally.</p>
 					<small>Most all photos self taken. All copyrights respected.</small>
