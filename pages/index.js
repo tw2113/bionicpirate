@@ -36,18 +36,22 @@ export default function Home({ books }) {
 				</div>
 			</section>
 
-			<article className="flex flex-wrap w-full">
+			<article className="flex flex-wrap w-full mt-4">
 					{
 						filteredbooks.map(
 							(book) =>
-							<div key={book.id} className="flex-auto w-2/12">
-								<Image
-									src={book._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}
-									alt=""
-									layout="fixed"
-									width="225"
-									height="300"
-								/>
+							<div key={book.id} className="flex-auto w-3/12">
+								<Link href={`https://www.indiebound.org/book/${encodeURIComponent(book.pbc_book_isbn[0])}`}>
+									<a target="_blank" rel="noopener noreferrer">
+										<Image
+											src={book._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}
+											alt=""
+											layout="fixed"
+											width="225"
+											height="300"
+										/>
+									</a>
+								</Link>
 							</div>
 						)
 					}
