@@ -9,7 +9,7 @@ import {fetchBookData} from "../lib/posts";
 
 export async function getStaticProps() {
 
-	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100';
+	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100&orderby=rand';
 	const books = await fetchBookData( url );
 
 	return {
