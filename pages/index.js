@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout, {siteTitle} from '../components/layout'
+import Book from '../components/book'
 import Link from 'next/link'
 import utilStyles from '../styles/utils.module.css'
 
@@ -38,20 +39,7 @@ export default function Home({ books }) {
 			<article className="flex flex-wrap w-full mt-4">
 					{
 						filteredbooks.map(
-							(book) =>
-							<div key={book.id} className="flex-auto w-3/12">
-								<Link href={`https://www.indiebound.org/book/${encodeURIComponent(book.pbc_book_isbn[0])}`}>
-									<a target="_blank" rel="noopener noreferrer">
-										<Image
-											src={book._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}
-											alt=""
-											layout="fixed"
-											width="225"
-											height="300"
-										/>
-									</a>
-								</Link>
-							</div>
+							(book, i) => <Book key={i} book={book} />
 						)
 					}
 			</article>
