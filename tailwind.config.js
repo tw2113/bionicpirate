@@ -20,7 +20,7 @@ module.exports = {
 		}
 	},
 	plugins: [],
-	purge: [
+	content: [
 		// Use *.tsx if using TypeScript
 		'./pages/**/*.js',
 		'./components/**/*.js'
