@@ -17,8 +17,7 @@ export default function Book(props) {
 					/>
 				</a>
 			</Link>
-			Total pages: {book.pbc_total_pages[0]}<br/>
-			Author(s): {book.pbc_book_authors[0]}
+			<p>Total pages: {book.pbc_total_pages[0]}</p>
 		</div>
 	)
 }
