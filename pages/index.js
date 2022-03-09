@@ -5,12 +5,12 @@ import Book from '../components/book'
 import Link from 'next/link'
 import utilStyles from '../styles/utils.module.css'
 
-import {fetchBookData} from "../lib/posts";
+import {fetchBookChest} from "../lib/chest";
 
 export async function getStaticProps() {
 
 	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100&orderby=rand';
-	const books = await fetchBookData( url );
+	const books = await fetchBookChest( url );
 
 	return {
 		props: {
@@ -19,10 +19,10 @@ export async function getStaticProps() {
 	}
 }
 
-export default function Home({ books }) {
+export default function Shelf({ books }) {
 	let filteredbooks = books.filter(book => book._embedded['wp:featuredmedia'] !== undefined)
 	return (
-		<Layout home>
+		<Layout shelf>
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
