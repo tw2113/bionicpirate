@@ -5,11 +5,6 @@ import ReactHtmlParser from 'react-html-parser';
 
 export default function Book({book}) {
 	const thebook = book[0]
-	let thing = '<ul>'
-	for (let [key, value] of Object.entries(book[0])) {
-		thing += `<li>${key} | ${value}</li>`
-	}
-	thing += '</ul>'
 
 	return <Layout>
 		<div key={thebook.id} className="flex w-12/12">
