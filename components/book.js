@@ -17,9 +17,7 @@ export default function Book(props) {
 					/>
 				</a>
 			</Link>
-			<p>{ he.decode( book.title.rendered ) }<br/>
-				Total pages: {book.pbc_total_pages[0]}
-			</p>
+			<p>{ he.decode( book.title.rendered ) }</p>
 		</div>
 	)
 }
