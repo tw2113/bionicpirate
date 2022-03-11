@@ -7,7 +7,7 @@ export default function Genres(props) {
 		<div>Genre:&nbsp;
 			{
 				genres.map((genre, i) => [ i > 0 && ", ",
-					<Link href={genre.link}><a key={i}>{genre.name}</a></Link>
+					<Link key={i} href={genre.link}><a key={i}>{genre.name}</a></Link>
 				])
 			}
 		</div>
