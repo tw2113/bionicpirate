@@ -14,7 +14,7 @@ export default function Layout({children, home}) {
 				<link rel="icon" href="/favicon.ico" />
 				<meta
 					name="description"
-					content="What has Michael been reading?"
+					content={`What has ${name} been reading?`}
 				/>
 			</Head>
 			<header className={styles.header}>
@@ -26,14 +26,10 @@ export default function Layout({children, home}) {
 					<></>
 				)}
 			</header>
-			<main>{children}</main>
-			{!home && (
-				<div className={styles.backToHome}>
-					<Link href="/">
-						<a>← Back to home</a>
-					</Link>
-				</div>
-			)}
+			<main className="bookshelf">{children}</main>
+			<footer className="mb-8">
+				<small>&copy;2022 Most all photos self taken. All copyrights respected.</small>
+			</footer>
 		</div>
 	)
 }

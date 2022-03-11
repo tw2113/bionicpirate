@@ -17,6 +17,11 @@ module.exports = {
 			landscape: '1024px',
 			lg       : '100%',
 			limit    : '1270px'
+		},
+		extend: {
+			boxShadow: {
+				scheeles_boxshadow: 'box-shadow: 0 0 50px 25px var(--scheeles_purple)'
+			}
 		}
 	},
 	plugins: [],
