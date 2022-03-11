@@ -9,7 +9,7 @@ import {fetchBookChest} from "../lib/chest";
 
 export async function getStaticProps() {
 
-	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100&orderby=rand';
+	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100';
 	const books = await fetchBookChest( url );
 
 	return {
