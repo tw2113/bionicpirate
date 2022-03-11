@@ -4,7 +4,7 @@ export default function Meta(props) {
 	const {author, isbn, pages} = props.meta
 
 	return (
-		<div>
+		<div key="{isbn}">
 			Author: {author}<br/>
 			Pages: {pages}<br/>
 			ISBN13: <Link href={`https://www.indiebound.org/book/${isbn}`}>
