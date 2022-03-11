@@ -4,10 +4,10 @@ export default function Genres(props) {
 	const {genres} = props
 
 	return (
-		<div key={genres[0].name}>Genre:&nbsp;
+		<div>Genre:&nbsp;
 			{
 				genres.map((genre, i) => [ i > 0 && ", ",
-					<Link href={genre.link}><a>{genre.name}</a></Link>
+					<Link href={genre.link}><a key={i}>{genre.name}</a></Link>
 				])
 			}
 		</div>
