@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Layout, {siteTitle} from '../components/layout'
 import Book from '../components/book'
 import Link from 'next/link'
-import utilStyles from '../styles/utils.module.css'
 
 import {fetchBookChest} from "../lib/chest";
 
