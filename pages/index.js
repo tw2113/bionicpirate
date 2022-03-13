@@ -26,7 +26,7 @@ export default function Shelf({ books }) {
 			</Head>
 			<section>
 				<div className="text-center">
-				<p>*record scratch* *page turn*</p>
+				<h1>*record scratch* *page turn*</h1>
 				<p>Oh hi there, I didn&apos;t see you come in.</p>
 				<p>I like to read. This is some of what I&apos;ve read. About {filteredbooks.length} at the moment.</p>
 				<p>Click on a book to get more information about it.</p>
