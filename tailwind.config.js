@@ -6,7 +6,8 @@ module.exports = {
 			current: 'currentColor',
 			scheeles_green: '#478800',
 			scheeles_blue: '#00478A',
-			scheeles_purple: '#8A0047'
+			scheeles_purple: '#8A0047',
+			mummy_brown: '#8f4a21'
 		},
 		screens: {
 			xs       : '480px',
