@@ -6,6 +6,7 @@
 	--scheeles_green: #478800;
 	--scheeles_blue: #00478A;
 	--scheeles_purple: #8A0047;
+	--mummy_brown: #8f4a21;
 }
 
 html,
@@ -41,10 +42,15 @@ img {
 	transition: box-shadow 0.1s ease-in-out;
 }
 
-.bookshelf article > div:nth-child(even) span:hover {
+.bookshelf article > div:nth-child(3n+1) span:hover {
 	box-shadow: 0 0 50px 25px var(--scheeles_purple);
 }
 
-.bookshelf article > div:nth-child(odd) span:hover {
+.bookshelf article > div:nth-child(3n+2) span:hover {
 	box-shadow: 0 0 50px 25px var(--scheeles_green);
 }
+
+.bookshelf article > div:nth-child(3n+3) span:hover {
+	box-shadow: 0 0 50px 25px var(--mummy_brown);
+}
+
