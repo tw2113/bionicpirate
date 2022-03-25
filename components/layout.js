@@ -16,6 +16,8 @@ export default function Layout({children, home}) {
 					name="description"
 					content={`What has ${name} been reading?`}
 				/>
+				<meta name="og:title" content={siteTitle}/>
+				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<header className={styles.header}>
 				{home ? (
