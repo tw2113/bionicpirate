@@ -32,7 +32,6 @@ export default function Shelf({ books }) {
 				<p>Click on a book to get more information about it.</p>
 				</div>
 			</section>
-
 			<article className="flex flex-wrap w-full mt-4">
 					{
 						filteredbooks.map(
