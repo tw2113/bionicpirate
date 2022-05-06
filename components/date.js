@@ -1,6 +1,6 @@
 import {parseISO, format} from 'date-fns'
 
-export default function Date({dateString}) {
-	const date = parseISO(dateString)
-	return <time dateTime={dateString}>{format(date, 'LLL d, yyyy')}</time>
+export default function BookDate({dateString}) {
+	const thedate =	Math.floor(dateString * 1000);
+	return <time dateTime={dateString}>{format(thedate, 'LLL d, yyyy')}</time>
 }

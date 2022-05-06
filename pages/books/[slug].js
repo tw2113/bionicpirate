@@ -15,9 +15,10 @@ export default function Book({book}) {
 		isbn: thebook.pbc_book_isbn[0],
 		pages: thebook.pbc_total_pages[0],
 		author: thebook.pbc_book_authors[0],
-		start: thebook.pbc_start_date,
-		finished: thebook.pbc_finished_date,
+		start: thebook.pbc_start_date[0],
+		finished: thebook.pbc_finished_date[0],
 	}
+	
 	return <Layout>
 		<h1 className="my-8 text-5xl">{he.decode(thebook.title.rendered)}</h1>
 		<div key={thebook.id} className="flex w-12/12">
