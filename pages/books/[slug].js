@@ -26,11 +26,10 @@ export default function Book({book}) {
 			<div className="w-6/12">
 				<Image
 					className="max-w-md"
-					src={thebook._embedded['wp:featuredmedia'][0].media_details.sizes.book_next_thumb.source_url}
+					src={thebook._embedded['wp:featuredmedia'][0].media_details.sizes.book_cover.source_url}
 					alt={thebook._embedded['wp:featuredmedia'][0].alt_text}
-					layout="fixed"
-					width={thebook._embedded['wp:featuredmedia'][0].media_details.sizes.book_next_thumb.width}
-					height={thebook._embedded['wp:featuredmedia'][0].media_details.sizes.book_next_thumb.height}
+					width={thebook._embedded['wp:featuredmedia'][0].media_details.sizes.book_cover.width}
+					height={thebook._embedded['wp:featuredmedia'][0].media_details.sizes.book_cover.height}
 				/>
 
 				<div className={styles.backToHome}>
