@@ -9,8 +9,8 @@ export default function Meta(props) {
 			Author: {author}<br/>
 			Pages: {pages}<br/>
 			Reading duration: <Date dateString={start} /> to <Date dateString={finished} /><br/>
-			ISBN13: <Link href={`https://www.indiebound.org/book/${isbn}`}>
-				<a target="_blank" rel="noopener noreferrer">{isbn}</a>
+			ISBN13: <Link target="_blank" rel="noopener noreferrer" href={`https://www.indiebound.org/book/${isbn}`}>
+				{isbn}
 			</Link>
 		</div>
 	)

@@ -35,12 +35,12 @@ export default function Book({book}) {
 
 				<div className={styles.backToHome}>
 					<Link href="/">
-						<a>← Back to home</a>
+						← Back to home
 					</Link>
 				</div>
 			</div>
 			<div className="w=6/12 px-8">
-				<strong>Permalink:</strong> <Link href={thebook.link}><a>{thebook.link}</a></Link><br/>
+				<strong>Permalink:</strong> <Link href={thebook.link}>{thebook.link}</Link><br/>
 				<Genres genres={thebook._embedded['wp:term'][2]} />
 				<Meta meta={meta} />
 				<strong>Description:</strong>
@@ -51,7 +51,7 @@ export default function Book({book}) {
 		</div>
 		<div className={styles.backToHome}>
 			<Link href="/">
-				<a>← Back to home</a>
+				← Back to home
 			</Link>
 		</div>
 	</Layout>
