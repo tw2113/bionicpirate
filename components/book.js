@@ -13,7 +13,6 @@ export default function Book(props) {
 				<Image
 					src={medium.source_url}
 					alt={mediumBook.alt_text}
-					layout="fixed"
 					width={medium.width}
 					height={medium.height}
 				/>
