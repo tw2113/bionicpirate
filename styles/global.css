@@ -42,15 +42,15 @@ img {
 	transition: box-shadow 0.1s ease-in-out;
 }
 
-.bookshelf article > div:nth-child(3n+1) span:hover {
+.bookshelf article > div:nth-child(3n+1) img:hover {
 	box-shadow: 0 0 50px 25px var(--scheeles_purple);
 }
 
-.bookshelf article > div:nth-child(3n+2) span:hover {
+.bookshelf article > div:nth-child(3n+2) img:hover {
 	box-shadow: 0 0 50px 25px var(--scheeles_green);
 }
 
-.bookshelf article > div:nth-child(3n+3) span:hover {
+.bookshelf article > div:nth-child(3n+3) img:hover {
 	box-shadow: 0 0 50px 25px var(--mummy_brown);
 }
 
