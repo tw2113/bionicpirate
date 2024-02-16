@@ -75,7 +75,8 @@ export async function getStaticPaths() {
 			)
 		);
 		results.forEach( ( batch, batch_index ) => {
-			batch.forEach( ( book, book_index ) => {
+			let filteredBatch = batch.filter(book => book._embedded['wp:featuredmedia'] !== undefined)
+			filteredBatch.forEach( ( book, book_index ) => {
 				paths.push(
 					{
 						params: {
