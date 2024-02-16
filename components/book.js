@@ -15,6 +15,7 @@ export default function Book(props) {
 					alt={mediumBook.alt_text}
 					width={medium.width}
 					height={medium.height}
+					className="mx-auto"
 				/>
 			</Link>
 			<p>{ he.decode( book.title.rendered ) }</p>
