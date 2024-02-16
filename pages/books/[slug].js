@@ -22,7 +22,6 @@ export default function Book({book}) {
 	return <Layout>
 		<h1 className="my-8 text-5xl">{he.decode(thebook.title.rendered)}</h1>
 		<div key={thebook.id} className="flex w-12/12">
-
 			<div className="w-6/12">
 				<Image
 					className="max-w-md"
@@ -57,8 +56,36 @@ export default function Book({book}) {
 }
 
 export async function getStaticPaths() {
-	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100&orderby=pbc_finished_date';
-	const paths = await fetchBookChestBookSlugs(url);
+	let paths = []; let fetches = [];
+	let results, totalPages;
+	let url = new URL( 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100&orderby=pbc_finished_date' );
+	const resp = await fetch( url );
+
+	totalPages = Number( resp.headers.get('x-wp-totalpages') );
+
+	if ( totalPages >= Number( 1 ) ) {
+		for(let page=1;page<=totalPages;page++) {
+			url.searchParams.append('page',page);
+			fetches.push( fetch( url ) );
+		}
+		results = await Promise.all(fetches).then(
+			(responses) => Promise.all(
+				responses.map( (response) => response.json()
+				)
+			)
+		);
+		results.forEach( ( batch, batch_index ) => {
+			batch.forEach( ( book, book_index ) => {
+				paths.push(
+					{
+						params: {
+							slug: book.slug
+						}
+					}
+				);
+			} );
+		} );
+	}
 
 	return {
 		paths,
