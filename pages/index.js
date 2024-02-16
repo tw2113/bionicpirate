@@ -6,9 +6,30 @@ import Link from 'next/link'
 import {fetchBookChest} from "../lib/chest";
 
 export async function getStaticProps() {
+	let books = []; let fetches = [];
+	let results, totalPages;
+	let url = new URL( 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100&orderby=pbc_finished_date' );
+	const resp = await fetch( url );
 
-	const url = 'https://apiratelifefor.me/wp-json/wp/v2/books?_embed&book_status=94&per_page=100&orderby=pbc_finished_date';
-	const books = await fetchBookChest( url );
+	totalPages = Number( resp.headers.get('x-wp-totalpages') );
+
+	if ( totalPages >= Number( 1 ) ) {
+		for(let page=1;page<=totalPages;page++) {
+			url.searchParams.append('page',page);
+			fetches.push( fetch( url ) );
+		}
+		results = await Promise.all(fetches).then(
+			(responses) => Promise.all(
+				responses.map( (response) => response.json()
+				)
+			)
+		);
+		results.forEach( ( batch, batch_index ) => {
+			batch.forEach( ( book, book_index ) => {
+				books.push(book);
+			} );
+		} );
+	}
 
 	return {
 		props: {
@@ -18,7 +39,8 @@ export async function getStaticProps() {
 }
 
 export default function Shelf({ books }) {
-	let filteredbooks = books.filter(book => book._embedded['wp:featuredmedia'] !== undefined)
+	let filteredbooks = books.filter(book => book._embedded['wp:featuredmedia'] !== undefined);
+
 	return (
 		<Layout shelf>
 			<Head>
