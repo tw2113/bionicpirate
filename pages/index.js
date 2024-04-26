@@ -48,10 +48,10 @@ export default function Shelf({ books }) {
 			</Head>
 			<section>
 				<div className="text-center">
-				<h1>*record scratch* *page turn*</h1>
-				<p>Oh hi there, I didn&apos;t see you come in.</p>
-				<p>I like to read. This is some of what I&apos;ve read. About {filteredbooks.length} at the moment.</p>
-				<p>Click on a book to get more information about it.</p>
+				<h1 className="text-4xl">Bionic Pirate</h1>
+				<p className="ml-3">*record scratch* *page turn*</p>
+				<p className="ml-3">Oh hi there, I didn't see you come in. I like to read. Since 2018, I also like to track what I've read. Below are roughly all of those books. About {filteredbooks.length} at the moment.</p>
+				<p className="ml-3">Click on a book to get more information about it.</p>
 				</div>
 			</section>
 			<article className="flex flex-wrap w-full mt-4">
