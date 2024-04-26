@@ -38,10 +38,15 @@ img {
 	display: block;
 }
 
-.bookshelf span {
-	transition: box-shadow 0.1s ease-in-out;
+body {
+	background: radial-gradient(ellipse at top, var(--scheeles_blue), transparent),
+            radial-gradient(ellipse at bottom, var(--scheeles_green), transparent);
+	background-attachment: fixed;
 }
 
+.bookshelf article > div img {
+	transition: box-shadow 0.1s ease-in-out;
+}
 .bookshelf article > div:nth-child(3n+1) img:hover {
 	box-shadow: 0 0 50px 25px var(--scheeles_purple);
 }
