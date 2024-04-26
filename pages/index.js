@@ -46,7 +46,7 @@ export default function Shelf({ books }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section className="py-4 rounded-xl bg-orange-500">
+			<section className="py-4 rounded-xl bg-gradient-to-b from-scheeles_purple to-scheeles_blue mb-12 mt-4">
 				<div className="text-center">
 				<p className="ml-3">*record scratch* *page turn*</p>
 				<p className="ml-3">Oh hi there, I didn't see you come in. I like to read. Since 2018, I also like to track what I've read. Below are roughly all of those books. About {filteredbooks.length} at the moment.</p>
