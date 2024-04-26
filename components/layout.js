@@ -22,7 +22,7 @@ export default function Layout({children, home}) {
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<header className={styles.header}>
-				<><h1 className="text-4xl">Bionic Pirate</h1></>
+				<><h1 className="text-4xl mt-4">Bionic Pirate</h1></>
 			</header>
 			<main className="bookshelf">{children}</main>
 			<footer className="mb-8">
