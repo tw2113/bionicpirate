@@ -3,7 +3,7 @@ import Genres from "../../components/genres"
 import Meta from "../../components/meta"
 import {fetchBookChestBookSlugs, getPostData} from "../../lib/chest"
 import Image from "next/image"
-import ReactHtmlParser from 'react-html-parser'
+import parse from 'html-react-parser';
 import Link from "next/link"
 import he from "he";
 import styles from '../../components/layout.module.css'
@@ -43,7 +43,7 @@ export default function Book({book}) {
 				<Meta meta={meta} />
 				<strong>Description:</strong>
 				<div className="space-y-4 ml-4">
-					{ReactHtmlParser(thebook.content.rendered)}
+					{parse(thebook.content.rendered)}
 				</div>
 			</div>
 		</div>
