@@ -46,9 +46,8 @@ export default function Shelf({ books }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section>
+			<section className="py-4 rounded-xl bg-orange-500">
 				<div className="text-center">
-				<h1 className="text-4xl">Bionic Pirate</h1>
 				<p className="ml-3">*record scratch* *page turn*</p>
 				<p className="ml-3">Oh hi there, I didn't see you come in. I like to read. Since 2018, I also like to track what I've read. Below are roughly all of those books. About {filteredbooks.length} at the moment.</p>
 				<p className="ml-3">Click on a book to get more information about it.</p>
