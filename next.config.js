@@ -1,5 +1,11 @@
 module.exports = {
 	images: {
-		remotePatterns: ['apiratelifefor.me'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'apiratelifefor.me',
+				pathname: '**',
+			},
+		],
 	},
 }
