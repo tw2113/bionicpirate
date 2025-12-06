@@ -6,9 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "he": "^1.2.0",
+    "html-react-parser": "^5.2.10",
     "next": "^16.0.7",
     "next-graphql-static-export": "^1.1.8",
     "postcss-flexbugs-fixes": "^5.0.2",
