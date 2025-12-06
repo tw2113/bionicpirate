@@ -1,5 +1,5 @@
 module.exports = {
 	images: {
-		domains: ['apiratelifefor.me'],
+		remotePatterns: ['apiratelifefor.me'],
 	},
 }
