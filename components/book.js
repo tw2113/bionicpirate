@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import he from 'he'
+import { decode } from 'he'
 
 export default function Book(props) {
 	const {book} = props
@@ -17,7 +17,7 @@ export default function Book(props) {
 					/>
 				</a>
 			</Link>
-			<p>{ he.decode( book.title.rendered ) }</p>
+			<p>{ decode( book.title.rendered ) }</p>
 		</div>
 	)
 }

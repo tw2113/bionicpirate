@@ -5,7 +5,7 @@ import {fetchBookChestBookSlugs, getPostData} from "../../lib/chest"
 import Image from "next/image"
 import ReactHtmlParser from 'react-html-parser'
 import Link from "next/link"
-import he from "he";
+import { decode } from "he";
 import styles from '../../components/layout.module.css'
 
 export default function Book({book}) {
@@ -20,7 +20,7 @@ export default function Book({book}) {
 	}
 	
 	return <Layout>
-		<h1 className="my-8 text-5xl">{he.decode(thebook.title.rendered)}</h1>
+		<h1 className="my-8 text-5xl">{decode(thebook.title.rendered)}</h1>
 		<div key={thebook.id} className="flex w-12/12">
 
 			<div className="w-6/12">
